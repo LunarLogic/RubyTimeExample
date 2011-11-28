@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58E25F1D1483F2AF001EFDC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E25F1C1483F2AF001EFDC0 /* UIKit.framework */; };
+		58E25F1F1483F2AF001EFDC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E25F1E1483F2AF001EFDC0 /* Foundation.framework */; };
+		58E25F211483F2AF001EFDC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E25F201483F2AF001EFDC0 /* CoreGraphics.framework */; };
+		58E25F271483F2AF001EFDC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58E25F251483F2AF001EFDC0 /* InfoPlist.strings */; };
+		58E25F291483F2AF001EFDC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F281483F2AF001EFDC0 /* main.m */; };
+		58E25F2D1483F2AF001EFDC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F2C1483F2AF001EFDC0 /* AppDelegate.m */; };
+		58E25F301483F2AF001EFDC0 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F2F1483F2AF001EFDC0 /* MasterViewController.m */; };
+		58E25F331483F2AF001EFDC0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F321483F2AF001EFDC0 /* DetailViewController.m */; };
+		58E25F361483F2AF001EFDC0 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E25F341483F2AF001EFDC0 /* MasterViewController.xib */; };
+		58E25F391483F2AF001EFDC0 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E25F371483F2AF001EFDC0 /* DetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		58E25F181483F2AF001EFDC0 /* RubyTimeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RubyTimeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58E25F1C1483F2AF001EFDC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		58E25F1E1483F2AF001EFDC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		58E25F201483F2AF001EFDC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		58E25F241483F2AF001EFDC0 /* RubyTimeExample-Info.plist */ = {isa = PBXFileReference; path = "RubyTimeExample-Info.plist"; sourceTree = "<group>"; };
+		58E25F261483F2AF001EFDC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		58E25F281483F2AF001EFDC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		58E25F2A1483F2AF001EFDC0 /* RubyTimeExample-Prefix.pch */ = {isa = PBXFileReference; path = "RubyTimeExample-Prefix.pch"; sourceTree = "<group>"; };
+		58E25F2B1483F2AF001EFDC0 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		58E25F2C1483F2AF001EFDC0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		58E25F2E1483F2AF001EFDC0 /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		58E25F2F1483F2AF001EFDC0 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		58E25F311483F2AF001EFDC0 /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		58E25F321483F2AF001EFDC0 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		58E25F351483F2AF001EFDC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
+		58E25F381483F2AF001EFDC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58E25F151483F2AF001EFDC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58E25F1D1483F2AF001EFDC0 /* UIKit.framework in Frameworks */,
+				58E25F1F1483F2AF001EFDC0 /* Foundation.framework in Frameworks */,
+				58E25F211483F2AF001EFDC0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58E25F0D1483F2AE001EFDC0 = {
+			isa = PBXGroup;
+			children = (
+				58E25F221483F2AF001EFDC0 /* RubyTimeExample */,
+				58E25F1B1483F2AF001EFDC0 /* Frameworks */,
+				58E25F191483F2AF001EFDC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		58E25F191483F2AF001EFDC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58E25F181483F2AF001EFDC0 /* RubyTimeExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58E25F1B1483F2AF001EFDC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58E25F1C1483F2AF001EFDC0 /* UIKit.framework */,
+				58E25F1E1483F2AF001EFDC0 /* Foundation.framework */,
+				58E25F201483F2AF001EFDC0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58E25F221483F2AF001EFDC0 /* RubyTimeExample */ = {
+			isa = PBXGroup;
+			children = (
+				58E25F2B1483F2AF001EFDC0 /* AppDelegate.h */,
+				58E25F2C1483F2AF001EFDC0 /* AppDelegate.m */,
+				58E25F2E1483F2AF001EFDC0 /* MasterViewController.h */,
+				58E25F2F1483F2AF001EFDC0 /* MasterViewController.m */,
+				58E25F311483F2AF001EFDC0 /* DetailViewController.h */,
+				58E25F321483F2AF001EFDC0 /* DetailViewController.m */,
+				58E25F341483F2AF001EFDC0 /* MasterViewController.xib */,
+				58E25F371483F2AF001EFDC0 /* DetailViewController.xib */,
+				58E25F231483F2AF001EFDC0 /* Supporting Files */,
+			);
+			path = RubyTimeExample;
+			sourceTree = "<group>";
+		};
+		58E25F231483F2AF001EFDC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58E25F241483F2AF001EFDC0 /* RubyTimeExample-Info.plist */,
+				58E25F251483F2AF001EFDC0 /* InfoPlist.strings */,
+				58E25F281483F2AF001EFDC0 /* main.m */,
+				58E25F2A1483F2AF001EFDC0 /* RubyTimeExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58E25F171483F2AF001EFDC0 /* RubyTimeExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58E25F3C1483F2AF001EFDC0 /* Build configuration list for PBXNativeTarget "RubyTimeExample" */;
+			buildPhases = (
+				58E25F141483F2AF001EFDC0 /* Sources */,
+				58E25F151483F2AF001EFDC0 /* Frameworks */,
+				58E25F161483F2AF001EFDC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RubyTimeExample;
+			productName = RubyTimeExample;
+			productReference = 58E25F181483F2AF001EFDC0 /* RubyTimeExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58E25F0F1483F2AE001EFDC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Lunar Logic Polska";
+			};
+			buildConfigurationList = 58E25F121483F2AE001EFDC0 /* Build configuration list for PBXProject "RubyTimeExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 58E25F0D1483F2AE001EFDC0;
+			productRefGroup = 58E25F191483F2AF001EFDC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58E25F171483F2AF001EFDC0 /* RubyTimeExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58E25F161483F2AF001EFDC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58E25F271483F2AF001EFDC0 /* InfoPlist.strings in Resources */,
+				58E25F361483F2AF001EFDC0 /* MasterViewController.xib in Resources */,
+				58E25F391483F2AF001EFDC0 /* DetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58E25F141483F2AF001EFDC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58E25F291483F2AF001EFDC0 /* main.m in Sources */,
+				58E25F2D1483F2AF001EFDC0 /* AppDelegate.m in Sources */,
+				58E25F301483F2AF001EFDC0 /* MasterViewController.m in Sources */,
+				58E25F331483F2AF001EFDC0 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		58E25F251483F2AF001EFDC0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58E25F261483F2AF001EFDC0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		58E25F341483F2AF001EFDC0 /* MasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58E25F351483F2AF001EFDC0 /* en */,
+			);
+			name = MasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		58E25F371483F2AF001EFDC0 /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58E25F381483F2AF001EFDC0 /* en */,
+			);
+			name = DetailViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		58E25F3A1483F2AF001EFDC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		58E25F3B1483F2AF001EFDC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58E25F3D1483F2AF001EFDC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RubyTimeExample/RubyTimeExample-Prefix.pch";
+				INFOPLIST_FILE = "RubyTimeExample/RubyTimeExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		58E25F3E1483F2AF001EFDC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RubyTimeExample/RubyTimeExample-Prefix.pch";
+				INFOPLIST_FILE = "RubyTimeExample/RubyTimeExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58E25F121483F2AE001EFDC0 /* Build configuration list for PBXProject "RubyTimeExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58E25F3A1483F2AF001EFDC0 /* Debug */,
+				58E25F3B1483F2AF001EFDC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58E25F3C1483F2AF001EFDC0 /* Build configuration list for PBXNativeTarget "RubyTimeExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58E25F3D1483F2AF001EFDC0 /* Debug */,
+				58E25F3E1483F2AF001EFDC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58E25F0F1483F2AE001EFDC0 /* Project object */;
+}
