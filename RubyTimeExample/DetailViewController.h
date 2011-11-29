@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@class Project;
 
-@property (strong, nonatomic) id detailItem;
+@interface DetailViewController : UITableViewController {
+  NSArray *activities;
+  Project *project;
+}
 
-@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+- (id) initWithProject: (Project *) project;
 
 @end

@@ -1,15 +1,15 @@
 //
-//  MasterViewController.h
+//  Project.h
 //  RubyTimeExample
 //
 //  Created by Jakub Suder on 11.28.11.
 //  Copyright (c) 2011 Lunar Logic Polska. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "PSModel.h"
 
-@interface MasterViewController : UITableViewController {
-  NSArray *projects;
-}
+@interface Project : PSModel
+
+@property (nonatomic, copy) NSString *name;
 
 @end

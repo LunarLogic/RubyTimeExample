@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		588AC2E11484ED4A00520D50 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 588AC2E01484ED4A00520D50 /* Project.m */; };
 		58E25F1D1483F2AF001EFDC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E25F1C1483F2AF001EFDC0 /* UIKit.framework */; };
 		58E25F1F1483F2AF001EFDC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E25F1E1483F2AF001EFDC0 /* Foundation.framework */; };
 		58E25F211483F2AF001EFDC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E25F201483F2AF001EFDC0 /* CoreGraphics.framework */; };
@@ -15,8 +16,9 @@
 		58E25F2D1483F2AF001EFDC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F2C1483F2AF001EFDC0 /* AppDelegate.m */; };
 		58E25F301483F2AF001EFDC0 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F2F1483F2AF001EFDC0 /* MasterViewController.m */; };
 		58E25F331483F2AF001EFDC0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F321483F2AF001EFDC0 /* DetailViewController.m */; };
-		58E25F361483F2AF001EFDC0 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E25F341483F2AF001EFDC0 /* MasterViewController.xib */; };
-		58E25F391483F2AF001EFDC0 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E25F371483F2AF001EFDC0 /* DetailViewController.xib */; };
+		58E25F361483F2AF001EFDC0 /* TableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E25F341483F2AF001EFDC0 /* TableView.xib */; };
+		58E25F401483F32F001EFDC0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E25F3F1483F32F001EFDC0 /* LoginViewController.xib */; };
+		58E25F431483F3B0001EFDC0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F421483F3B0001EFDC0 /* LoginViewController.m */; };
 		58E25F461483F4B1001EFDC0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E25F451483F4B1001EFDC0 /* CFNetwork.framework */; };
 		58E25F481483F4B7001EFDC0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E25F471483F4B7001EFDC0 /* SystemConfiguration.framework */; };
 		58E25F4A1483F4BE001EFDC0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E25F491483F4BE001EFDC0 /* MobileCoreServices.framework */; };
@@ -46,25 +48,31 @@
 		58E25FA61483F530001EFDC0 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F961483F530001EFDC0 /* SFHFKeychainUtils.m */; };
 		58E25FA71483F530001EFDC0 /* PSUIExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F991483F530001EFDC0 /* PSUIExtensions.m */; };
 		58E25FA91483F616001EFDC0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E25FA81483F616001EFDC0 /* Security.framework */; };
+		58E25FAC1483F6C1001EFDC0 /* ServerConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25FAB1483F6C1001EFDC0 /* ServerConnector.m */; };
+		58E25FAF1483F6CD001EFDC0 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25FAE1483F6CD001EFDC0 /* Activity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		588AC2DF1484ED4A00520D50 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		588AC2E01484ED4A00520D50 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		58E25F181483F2AF001EFDC0 /* RubyTimeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RubyTimeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E25F1C1483F2AF001EFDC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		58E25F1E1483F2AF001EFDC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		58E25F201483F2AF001EFDC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		58E25F241483F2AF001EFDC0 /* RubyTimeExample-Info.plist */ = {isa = PBXFileReference; path = "RubyTimeExample-Info.plist"; sourceTree = "<group>"; };
+		58E25F241483F2AF001EFDC0 /* RubyTimeExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RubyTimeExample-Info.plist"; sourceTree = "<group>"; };
 		58E25F261483F2AF001EFDC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		58E25F281483F2AF001EFDC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		58E25F2A1483F2AF001EFDC0 /* RubyTimeExample-Prefix.pch */ = {isa = PBXFileReference; path = "RubyTimeExample-Prefix.pch"; sourceTree = "<group>"; };
-		58E25F2B1483F2AF001EFDC0 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		58E25F2A1483F2AF001EFDC0 /* RubyTimeExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RubyTimeExample-Prefix.pch"; sourceTree = "<group>"; };
+		58E25F2B1483F2AF001EFDC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58E25F2C1483F2AF001EFDC0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		58E25F2E1483F2AF001EFDC0 /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		58E25F2E1483F2AF001EFDC0 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		58E25F2F1483F2AF001EFDC0 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		58E25F311483F2AF001EFDC0 /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		58E25F311483F2AF001EFDC0 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		58E25F321483F2AF001EFDC0 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		58E25F351483F2AF001EFDC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
-		58E25F381483F2AF001EFDC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		58E25F351483F2AF001EFDC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TableView.xib; sourceTree = "<group>"; };
+		58E25F3F1483F32F001EFDC0 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		58E25F411483F3B0001EFDC0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		58E25F421483F3B0001EFDC0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		58E25F451483F4B1001EFDC0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		58E25F471483F4B7001EFDC0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		58E25F491483F4BE001EFDC0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -129,6 +137,10 @@
 		58E25F981483F530001EFDC0 /* PSUIExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSUIExtensions.h; sourceTree = "<group>"; };
 		58E25F991483F530001EFDC0 /* PSUIExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSUIExtensions.m; sourceTree = "<group>"; };
 		58E25FA81483F616001EFDC0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		58E25FAA1483F6C1001EFDC0 /* ServerConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerConnector.h; sourceTree = "<group>"; };
+		58E25FAB1483F6C1001EFDC0 /* ServerConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerConnector.m; sourceTree = "<group>"; };
+		58E25FAD1483F6CD001EFDC0 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		58E25FAE1483F6CD001EFDC0 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,15 +198,23 @@
 		58E25F221483F2AF001EFDC0 /* RubyTimeExample */ = {
 			isa = PBXGroup;
 			children = (
+				58E25FAD1483F6CD001EFDC0 /* Activity.h */,
+				58E25FAE1483F6CD001EFDC0 /* Activity.m */,
 				58E25F2B1483F2AF001EFDC0 /* AppDelegate.h */,
 				58E25F2C1483F2AF001EFDC0 /* AppDelegate.m */,
-				58E25F2E1483F2AF001EFDC0 /* MasterViewController.h */,
-				58E25F2F1483F2AF001EFDC0 /* MasterViewController.m */,
 				58E25F311483F2AF001EFDC0 /* DetailViewController.h */,
 				58E25F321483F2AF001EFDC0 /* DetailViewController.m */,
-				58E25F341483F2AF001EFDC0 /* MasterViewController.xib */,
-				58E25F371483F2AF001EFDC0 /* DetailViewController.xib */,
+				58E25F411483F3B0001EFDC0 /* LoginViewController.h */,
+				58E25F421483F3B0001EFDC0 /* LoginViewController.m */,
+				58E25F3F1483F32F001EFDC0 /* LoginViewController.xib */,
+				58E25F2E1483F2AF001EFDC0 /* MasterViewController.h */,
+				58E25F2F1483F2AF001EFDC0 /* MasterViewController.m */,
+				588AC2DF1484ED4A00520D50 /* Project.h */,
+				588AC2E01484ED4A00520D50 /* Project.m */,
+				58E25FAA1483F6C1001EFDC0 /* ServerConnector.h */,
+				58E25FAB1483F6C1001EFDC0 /* ServerConnector.m */,
 				58E25F231483F2AF001EFDC0 /* Supporting Files */,
+				58E25F341483F2AF001EFDC0 /* TableView.xib */,
 			);
 			path = RubyTimeExample;
 			sourceTree = "<group>";
@@ -392,8 +412,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				58E25F271483F2AF001EFDC0 /* InfoPlist.strings in Resources */,
-				58E25F361483F2AF001EFDC0 /* MasterViewController.xib in Resources */,
-				58E25F391483F2AF001EFDC0 /* DetailViewController.xib in Resources */,
+				58E25F361483F2AF001EFDC0 /* TableView.xib in Resources */,
+				58E25F401483F32F001EFDC0 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +428,7 @@
 				58E25F2D1483F2AF001EFDC0 /* AppDelegate.m in Sources */,
 				58E25F301483F2AF001EFDC0 /* MasterViewController.m in Sources */,
 				58E25F331483F2AF001EFDC0 /* DetailViewController.m in Sources */,
+				58E25F431483F3B0001EFDC0 /* LoginViewController.m in Sources */,
 				58E25F501483F4FA001EFDC0 /* JSONKit.m in Sources */,
 				58E25F681483F518001EFDC0 /* ASIAuthenticationDialog.m in Sources */,
 				58E25F691483F518001EFDC0 /* ASIDataCompressor.m in Sources */,
@@ -432,6 +453,9 @@
 				58E25FA51483F530001EFDC0 /* SDKeychain.m in Sources */,
 				58E25FA61483F530001EFDC0 /* SFHFKeychainUtils.m in Sources */,
 				58E25FA71483F530001EFDC0 /* PSUIExtensions.m in Sources */,
+				58E25FAC1483F6C1001EFDC0 /* ServerConnector.m in Sources */,
+				58E25FAF1483F6CD001EFDC0 /* Activity.m in Sources */,
+				588AC2E11484ED4A00520D50 /* Project.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,20 +470,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		58E25F341483F2AF001EFDC0 /* MasterViewController.xib */ = {
+		58E25F341483F2AF001EFDC0 /* TableView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				58E25F351483F2AF001EFDC0 /* en */,
 			);
-			name = MasterViewController.xib;
-			sourceTree = "<group>";
-		};
-		58E25F371483F2AF001EFDC0 /* DetailViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				58E25F381483F2AF001EFDC0 /* en */,
-			);
-			name = DetailViewController.xib;
+			name = TableView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

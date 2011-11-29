@@ -6,101 +6,57 @@
 //  Copyright (c) 2011 Lunar Logic Polska. All rights reserved.
 //
 
+#import "Activity.h"
 #import "DetailViewController.h"
-
-@interface DetailViewController ()
-- (void)configureView;
-@end
+#import "ServerConnector.h"
 
 @implementation DetailViewController
 
-@synthesize detailItem = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
+PSReleaseOnDealloc(project, activities);
 
-- (void)dealloc
-{
-  [_detailItem release];
-  [_detailDescriptionLabel release];
-    [super dealloc];
-}
-
-#pragma mark - Managing the detail item
-
-- (void)setDetailItem:(id)newDetailItem
-{
-    if (_detailItem != newDetailItem) {
-        [_detailItem release]; 
-        _detailItem = [newDetailItem retain]; 
-
-        // Update the view.
-        [self configureView];
-    }
-}
-
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-
-  if (self.detailItem) {
-      self.detailDescriptionLabel.text = [self.detailItem description];
+- (id) initWithProject: (Project *) aProject {
+  self = [super initWithNibName: @"TableView" bundle: nil];
+  if (self) {
+    project = [aProject retain];
+    self.title = [project name];
   }
+  return self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
+- (void) viewWillAppear: (BOOL) animated {
+  PSRequest *request = [[ServerConnector sharedConnector] loadActivitiesRequestForProject: project];
+  [request sendFor: self callback: @selector(activitiesLoaded:)];
 }
 
-#pragma mark - View lifecycle
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-  [self configureView];
+- (NSInteger) tableView: (UITableView *) tableView numberOfRowsInSection: (NSInteger) section {
+  return activities.count;
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+- (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath {
+  Activity *activity = [activities objectAtIndex: indexPath.row];
+
+  UITableViewCell *cell = [tableView psGenericCellWithStyle: UITableViewCellStyleSubtitle];
+  cell.accessoryType = UITableViewCellAccessoryNone;
+  cell.textLabel.text = [activity comments];
+  cell.detailTextLabel.text = PSFormat(@"%@ - %@", activity.date, [activity minutesAsString]);
+  return cell;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
+  [tableView deselectRowAtIndexPath: indexPath animated: YES];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
+- (void) activitiesLoaded: (NSArray *) list {
+  activities = [list retain];
+  [self.tableView reloadData];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
+- (void) requestFailed: (PSRequest *) request withError: (NSError *) error {
+  [UIAlertView psShowErrorWithMessage: PSFormat(@"Connection error: %@", error)];
 }
 
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-  return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    self.title = NSLocalizedString(@"Detail", @"Detail");
-    }
-    return self;
+- (void) authenticationFailedInRequest: (PSRequest *) request {
+  [UIAlertView psShowErrorWithMessage: @"Invalid login or password."];
 }
 							
 @end
