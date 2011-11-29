@@ -44,7 +44,6 @@
 		58E25FA21483F530001EFDC0 /* PSResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F8B1483F530001EFDC0 /* PSResponse.m */; };
 		58E25FA31483F530001EFDC0 /* PSRestRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F8D1483F530001EFDC0 /* PSRestRouter.m */; };
 		58E25FA41483F530001EFDC0 /* PSSecurityExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F921483F530001EFDC0 /* PSSecurityExtensions.m */; };
-		58E25FA51483F530001EFDC0 /* SDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F941483F530001EFDC0 /* SDKeychain.m */; };
 		58E25FA61483F530001EFDC0 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F961483F530001EFDC0 /* SFHFKeychainUtils.m */; };
 		58E25FA71483F530001EFDC0 /* PSUIExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E25F991483F530001EFDC0 /* PSUIExtensions.m */; };
 		58E25FA91483F616001EFDC0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E25FA81483F616001EFDC0 /* Security.framework */; };
@@ -130,8 +129,6 @@
 		58E25F8F1483F530001EFDC0 /* PsiToolkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PsiToolkit.h; sourceTree = "<group>"; };
 		58E25F911483F530001EFDC0 /* PSSecurityExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSecurityExtensions.h; sourceTree = "<group>"; };
 		58E25F921483F530001EFDC0 /* PSSecurityExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSecurityExtensions.m; sourceTree = "<group>"; };
-		58E25F931483F530001EFDC0 /* SDKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDKeychain.h; sourceTree = "<group>"; };
-		58E25F941483F530001EFDC0 /* SDKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKeychain.m; sourceTree = "<group>"; };
 		58E25F951483F530001EFDC0 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
 		58E25F961483F530001EFDC0 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
 		58E25F981483F530001EFDC0 /* PSUIExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSUIExtensions.h; sourceTree = "<group>"; };
@@ -343,8 +340,6 @@
 			children = (
 				58E25F911483F530001EFDC0 /* PSSecurityExtensions.h */,
 				58E25F921483F530001EFDC0 /* PSSecurityExtensions.m */,
-				58E25F931483F530001EFDC0 /* SDKeychain.h */,
-				58E25F941483F530001EFDC0 /* SDKeychain.m */,
 				58E25F951483F530001EFDC0 /* SFHFKeychainUtils.h */,
 				58E25F961483F530001EFDC0 /* SFHFKeychainUtils.m */,
 			);
@@ -450,7 +445,6 @@
 				58E25FA21483F530001EFDC0 /* PSResponse.m in Sources */,
 				58E25FA31483F530001EFDC0 /* PSRestRouter.m in Sources */,
 				58E25FA41483F530001EFDC0 /* PSSecurityExtensions.m in Sources */,
-				58E25FA51483F530001EFDC0 /* SDKeychain.m in Sources */,
 				58E25FA61483F530001EFDC0 /* SFHFKeychainUtils.m in Sources */,
 				58E25FA71483F530001EFDC0 /* PSUIExtensions.m in Sources */,
 				58E25FAC1483F6C1001EFDC0 /* ServerConnector.m in Sources */,
