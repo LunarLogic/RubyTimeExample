@@ -11,4 +11,11 @@
 #ifdef __OBJC__
   #import <UIKit/UIKit.h>
   #import <Foundation/Foundation.h>
+
+  #define PSITOOLKIT_ENABLE_MODELS
+  #define PSITOOLKIT_ENABLE_NETWORK
+  #define PSITOOLKIT_ENABLE_SECURITY
+  #define PSITOOLKIT_ENABLE_UIKIT
+  #define PSITOOLKIT_USE_JSONKIT
+  #import "PsiToolkit.h"
 #endif
