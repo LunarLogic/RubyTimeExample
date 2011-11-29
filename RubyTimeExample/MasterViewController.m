@@ -22,11 +22,15 @@
 }
 
 - (void) viewWillAppear: (BOOL) animated {
-  [super viewWillAppear: YES];
+  [super viewWillAppear: animated];
+
+  // load data from the server when the view is displayed
   if (!projects && [[ServerConnector sharedConnector] account]) {
     [[[ServerConnector sharedConnector] loadProjectsRequest] sendFor: self callback: @selector(projectsLoaded:)];
   }
 }
+
+// UITableView delegate and data source methods that describe table's contents and behavior
 
 - (NSInteger) tableView: (UITableView *) tableView numberOfRowsInSection: (NSInteger) section {
   return projects.count;
@@ -45,6 +49,8 @@
   DetailViewController *subcontroller = [[DetailViewController alloc] initWithProject: project];
   [self.navigationController pushViewController: [subcontroller autorelease] animated: YES];
 }
+
+// PSConnector response callbacks
 
 - (void) projectsLoaded: (NSArray *) list {
   projects = [list retain];

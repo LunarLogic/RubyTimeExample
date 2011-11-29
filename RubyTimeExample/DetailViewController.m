@@ -24,9 +24,14 @@ PSReleaseOnDealloc(project, activities);
 }
 
 - (void) viewWillAppear: (BOOL) animated {
+  [super viewWillAppear: animated];
+
+  // load data from the server when the view is displayed
   PSRequest *request = [[ServerConnector sharedConnector] loadActivitiesRequestForProject: project];
   [request sendFor: self callback: @selector(activitiesLoaded:)];
 }
+
+// UITableView delegate and data source methods that describe table's contents and behavior
 
 - (NSInteger) tableView: (UITableView *) tableView numberOfRowsInSection: (NSInteger) section {
   return activities.count;
@@ -45,6 +50,8 @@ PSReleaseOnDealloc(project, activities);
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
   [tableView deselectRowAtIndexPath: indexPath animated: YES];
 }
+
+// PSConnector response callbacks
 
 - (void) activitiesLoaded: (NSArray *) list {
   activities = [list retain];

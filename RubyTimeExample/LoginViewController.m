@@ -24,10 +24,14 @@ PSReleaseOnDealloc(usernameField, passwordField, loginButton, spinner);
 
 - (void) viewDidLoad {
   [super viewDidLoad];
+
+  // focus the username field at the beginning
   [usernameField becomeFirstResponder];
 }
 
 - (BOOL) textFieldShouldReturn: (UITextField *) textField {
+  // if user clicks "next" or "go" on the keyboard, move to the next step if the field isn't empty
+
   if (textField == usernameField && usernameField.text.length > 0) {
     [passwordField becomeFirstResponder];
     return YES;
@@ -56,14 +60,16 @@ PSReleaseOnDealloc(usernameField, passwordField, loginButton, spinner);
   [[connector loginRequest] sendFor: self callback: @selector(loginSuccessful)];
 }
 
-- (void) loginSuccessful {
-  [[[ServerConnector sharedConnector] account] save];
-  [self dismissModalViewControllerAnimated: YES];
-}
-
 - (void) enableForm {
   [spinner stopAnimating];
   [loginButton setEnabled: YES];
+}
+
+// PSConnector response callbacks
+
+- (void) loginSuccessful {
+  [[[ServerConnector sharedConnector] account] save];
+  [self dismissModalViewControllerAnimated: YES];
 }
 
 - (void) requestFailed: (PSRequest *) request withError: (NSError *) error {
