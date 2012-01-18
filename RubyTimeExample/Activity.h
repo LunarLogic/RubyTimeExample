@@ -6,9 +6,9 @@
 //  Copyright (c) 2011 Lunar Logic Polska. All rights reserved.
 //
 
-#import "PSModel.h"
+#import "LLModel.h"
 
-@interface Activity : PSModel
+@interface Activity : LLModel
 
 @property (nonatomic, copy) NSString *comments;
 @property (nonatomic, copy) NSString *date;

@@ -11,14 +11,14 @@
 @implementation Activity
 
 @synthesize comments, date, minutes;
-PSReleaseOnDealloc(comments, date);
+LLReleaseOnDealloc(comments, date);
 
 + (NSArray *) propertyList {
-  return PSArray(@"comments", @"date", @"minutes");
+  return LLArray(@"comments", @"date", @"minutes");
 }
 
 - (NSString *) minutesAsString {
-  return PSFormat(@"%d:%02d", minutes / 60, minutes % 60);
+  return LLFormat(@"%d:%02d", minutes / 60, minutes % 60);
 }
 
 @end

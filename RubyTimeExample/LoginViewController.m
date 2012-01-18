@@ -16,7 +16,7 @@
 @implementation LoginViewController
 
 @synthesize usernameField, passwordField, loginButton, spinner;
-PSReleaseOnDealloc(usernameField, passwordField, loginButton, spinner);
+LLReleaseOnDealloc(usernameField, passwordField, loginButton, spinner);
 
 - (id) init {
   return [super initWithNibName: @"LoginViewController" bundle: nil];
@@ -48,7 +48,7 @@ PSReleaseOnDealloc(usernameField, passwordField, loginButton, spinner);
 }
 
 - (void) authenticate {
-  PSAccount *account = [[PSAccount alloc] init];
+  LLAccount *account = [[LLAccount alloc] init];
   account.username = usernameField.text;
   account.password = passwordField.text;
 
@@ -72,14 +72,14 @@ PSReleaseOnDealloc(usernameField, passwordField, loginButton, spinner);
   [self dismissModalViewControllerAnimated: YES];
 }
 
-- (void) requestFailed: (PSRequest *) request withError: (NSError *) error {
+- (void) requestFailed: (LLRequest *) request withError: (NSError *) error {
   [self enableForm];
-  [UIAlertView psShowErrorWithMessage: PSFormat(@"Connection error: %@", error)];
+  [UIAlertView llShowErrorWithMessage: LLFormat(@"Connection error: %@", error)];
 }
 
-- (void) authenticationFailedInRequest: (PSRequest *) request {
+- (void) authenticationFailedInRequest: (LLRequest *) request {
   [self enableForm];
-  [UIAlertView psShowErrorWithMessage: @"Invalid login or password."];
+  [UIAlertView llShowErrorWithMessage: @"Invalid login or password."];
 }
 
 @end

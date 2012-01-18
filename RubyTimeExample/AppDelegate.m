@@ -14,7 +14,7 @@
 @implementation AppDelegate
 
 @synthesize window, navigationController;
-PSReleaseOnDealloc(window, navigationController);
+LLReleaseOnDealloc(window, navigationController);
 
 - (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
   UIWindow *mainWindow = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
@@ -22,10 +22,10 @@ PSReleaseOnDealloc(window, navigationController);
 
   ServerConnector *connector = [[ServerConnector alloc] init];
   [ServerConnector setSharedConnector: [connector autorelease]];
-  connector.account = [PSAccount accountFromSettings];
+  connector.account = [LLAccount accountFromSettings];
 
   MasterViewController *masterViewController = [[[MasterViewController alloc] init] autorelease];
-  self.navigationController = [masterViewController psWrapInNavigationController];
+  self.navigationController = [masterViewController llWrapInNavigationController];
 
   mainWindow.rootViewController = self.navigationController;
   [mainWindow makeKeyAndVisible];

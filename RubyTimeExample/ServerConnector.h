@@ -6,14 +6,14 @@
 //  Copyright (c) 2011 Lunar Logic Polska. All rights reserved.
 //
 
-#import "PSConnector.h"
+#import "LLConnector.h"
 
 @class Project;
 
-@interface ServerConnector : PSConnector
+@interface ServerConnector : LLConnector
 
-- (PSRequest *) loginRequest;
-- (PSRequest *) loadProjectsRequest;
-- (PSRequest *) loadActivitiesRequestForProject: (Project *) project;
+- (LLRequest *) loginRequest;
+- (LLRequest *) loadProjectsRequest;
+- (LLRequest *) loadActivitiesRequestForProject: (Project *) project;
 
 @end

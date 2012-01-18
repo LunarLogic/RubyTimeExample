@@ -37,7 +37,7 @@
 }
 
 - (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath {
-  UITableViewCell *cell = [tableView psGenericCellWithStyle: UITableViewCellStyleDefault];
+  UITableViewCell *cell = [tableView llGenericCellWithStyle: UITableViewCellStyleDefault];
   cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
   cell.textLabel.text = [[projects objectAtIndex: indexPath.row] name];
   return cell;
@@ -57,12 +57,12 @@
   [self.tableView reloadData];
 }
 
-- (void) requestFailed: (PSRequest *) request withError: (NSError *) error {
-  [UIAlertView psShowErrorWithMessage: PSFormat(@"Connection error: %@", error)];
+- (void) requestFailed: (LLRequest *) request withError: (NSError *) error {
+  [UIAlertView llShowErrorWithMessage: LLFormat(@"Connection error: %@", error)];
 }
 
-- (void) authenticationFailedInRequest: (PSRequest *) request {
-  [UIAlertView psShowErrorWithMessage: @"Invalid login or password."];
+- (void) authenticationFailedInRequest: (LLRequest *) request {
+  [UIAlertView llShowErrorWithMessage: @"Invalid login or password."];
 }
 
 @end

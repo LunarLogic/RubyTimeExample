@@ -11,10 +11,10 @@
 @implementation Project
 
 @synthesize name;
-PSReleaseOnDealloc(name);
+LLReleaseOnDealloc(name);
 
 + (NSArray *) propertyList {
-  return PSArray(@"name");
+  return LLArray(@"name");
 }
 
 @end

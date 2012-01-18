@@ -12,10 +12,10 @@
   #import <UIKit/UIKit.h>
   #import <Foundation/Foundation.h>
 
-  #define PSITOOLKIT_ENABLE_MODELS
-  #define PSITOOLKIT_ENABLE_NETWORK
-  #define PSITOOLKIT_ENABLE_SECURITY
-  #define PSITOOLKIT_ENABLE_UIKIT
-  #define PSITOOLKIT_USE_JSONKIT
-  #import "PsiToolkit.h"
+  #define LUNAR_TOOLKIT_ENABLE_MODELS
+  #define LUNAR_TOOLKIT_ENABLE_NETWORK
+  #define LUNAR_TOOLKIT_ENABLE_SECURITY
+  #define LUNAR_TOOLKIT_ENABLE_UIKIT
+  #define LUNAR_TOOLKIT_USE_JSONKIT
+  #import "LunarToolkit.h"
 #endif

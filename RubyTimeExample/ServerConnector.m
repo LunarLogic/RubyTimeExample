@@ -24,32 +24,32 @@
   return self;
 }
 
-- (void) prepareRequest: (PSRequest *) request {
+- (void) prepareRequest: (LLRequest *) request {
   [request setAuthenticationScheme: (NSString *) kCFHTTPAuthenticationSchemeBasic];
 }
 
 // methods that generate requests
 
-- (PSRequest *) loginRequest {
+- (LLRequest *) loginRequest {
   return [super requestToPath: @"/users/authenticate"];
 }
 
-- (PSRequest *) loadProjectsRequest {
-  PSRequest *request = [super requestToPath: @"/projects"];
+- (LLRequest *) loadProjectsRequest {
+  LLRequest *request = [super requestToPath: @"/projects"];
   request.successHandler = @selector(projectsLoaded:);
   return request;
 }
 
-- (PSRequest *) loadActivitiesRequestForProject: (Project *) project {
-  NSString *path = PSFormat(@"/projects/%@/activities?search_criteria[limit]=30", project.recordId);
-  PSRequest *request = [super requestToPath: path];
+- (LLRequest *) loadActivitiesRequestForProject: (Project *) project {
+  NSString *path = LLFormat(@"/projects/%@/activities?search_criteria[limit]=30", project.recordId);
+  LLRequest *request = [super requestToPath: path];
   request.successHandler = @selector(activitiesForProjectLoaded:);
   return request;
 }
 
 // methods that handle responses
 
-- (void) projectsLoaded: (PSRequest *) request {
+- (void) projectsLoaded: (LLRequest *) request {
   // use JSONKit to parse response into NSDictionary objects and then build Project model instances
   NSArray *projects = [self parseObjectsFromRequest: request model: [Project class]];
 
@@ -57,7 +57,7 @@
   [request notifyTargetOfSuccessWithObject: projects];
 }
 
-- (void) activitiesForProjectLoaded: (PSRequest *) request {
+- (void) activitiesForProjectLoaded: (LLRequest *) request {
   // use JSONKit to parse response into NSDictionary objects and then build Activity model instances
   NSArray *activities = [self parseObjectsFromRequest: request model: [Activity class]];
 

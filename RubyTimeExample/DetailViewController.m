@@ -12,7 +12,7 @@
 
 @implementation DetailViewController
 
-PSReleaseOnDealloc(project, activities);
+LLReleaseOnDealloc(project, activities);
 
 - (id) initWithProject: (Project *) aProject {
   self = [super initWithNibName: @"TableView" bundle: nil];
@@ -27,7 +27,7 @@ PSReleaseOnDealloc(project, activities);
   [super viewWillAppear: animated];
 
   // load data from the server when the view is displayed
-  PSRequest *request = [[ServerConnector sharedConnector] loadActivitiesRequestForProject: project];
+  LLRequest *request = [[ServerConnector sharedConnector] loadActivitiesRequestForProject: project];
   [request sendFor: self callback: @selector(activitiesLoaded:)];
 }
 
@@ -40,10 +40,10 @@ PSReleaseOnDealloc(project, activities);
 - (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath {
   Activity *activity = [activities objectAtIndex: indexPath.row];
 
-  UITableViewCell *cell = [tableView psGenericCellWithStyle: UITableViewCellStyleSubtitle];
+  UITableViewCell *cell = [tableView llGenericCellWithStyle: UITableViewCellStyleSubtitle];
   cell.accessoryType = UITableViewCellAccessoryNone;
   cell.textLabel.text = [activity comments];
-  cell.detailTextLabel.text = PSFormat(@"%@ - %@", activity.date, [activity minutesAsString]);
+  cell.detailTextLabel.text = LLFormat(@"%@ - %@", activity.date, [activity minutesAsString]);
   return cell;
 }
 
@@ -58,12 +58,12 @@ PSReleaseOnDealloc(project, activities);
   [self.tableView reloadData];
 }
 
-- (void) requestFailed: (PSRequest *) request withError: (NSError *) error {
-  [UIAlertView psShowErrorWithMessage: PSFormat(@"Connection error: %@", error)];
+- (void) requestFailed: (LLRequest *) request withError: (NSError *) error {
+  [UIAlertView llShowErrorWithMessage: LLFormat(@"Connection error: %@", error)];
 }
 
-- (void) authenticationFailedInRequest: (PSRequest *) request {
-  [UIAlertView psShowErrorWithMessage: @"Invalid login or password."];
+- (void) authenticationFailedInRequest: (LLRequest *) request {
+  [UIAlertView llShowErrorWithMessage: @"Invalid login or password."];
 }
 							
 @end
